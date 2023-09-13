@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="volverAHome()">
+        <ion-icon slot="icon-only" name="home"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      Repartidores
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        Agregar repartidor
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <ion-list>
+    <ion-item *ngFor="let repartidor of repartidores" (click)="verDetalleRepartidor(repartidor.id)">
+      <ion-label>{{ repartidor.nombre }}</ion-label>
+    </ion-item>
+  </ion-list>
+  
+
+
+</ion-content>
+

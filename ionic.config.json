@@ -1,0 +1,7 @@
+{
+  "name": "vega-joquin-007d",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

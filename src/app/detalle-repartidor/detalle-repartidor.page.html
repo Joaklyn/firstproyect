@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/ver-repartidores"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Detalles del Repartidor
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      {{ repartidor.nombre }}
+    </ion-card-header>
+    <ion-card-content>
+      <p>Edad: {{ repartidor.edad }}</p>
+      <p>Sexo: {{ repartidor.sexo }}</p>
+      <p>Nacionalidad: {{ repartidor.nacionalidad }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

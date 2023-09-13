@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/ver-paquetes"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detalle del Paquete</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf="paquete">
+    <ion-card-header>
+      {{ paquete.nombre }}
+    </ion-card-header>
+    <ion-card-content>
+      <p>ID: {{ paquete.id }}</p>
+      <p>Descripción: {{ paquete.descripcion }}</p>
+      <p>Repartidor: {{ paquete.repartidor }}</p>
+      <p>Estado: {{ paquete.estado }}</p>
+    </ion-card-content>
+  </ion-card>
+  <ion-card *ngIf="!paquete">
+    <ion-card-content>
+      <p>El paquete no se encontró o no existe.</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
