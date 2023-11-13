@@ -1,51 +1,43 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { VerPaquetesPage } from './ver-paquetes/ver-paquetes.page';
-import { DetallePaquetePage } from './detalle-paquete/detalle-paquete.page';
+
 
 const routes: Routes = [
-  {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-  },
+  
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
+ 
+ 
   {
-    path: 'ver-paquetes',
-    loadChildren: () => import('./ver-paquetes/ver-paquetes.module').then( m => m.VerPaquetesPageModule)
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
   },
   {
-    path: 'ver-repartidores',
-    loadChildren: () => import('./ver-repartidores/ver-repartidores.module').then( m => m.VerRepartidoresPageModule)
+    path: 'registro',
+    loadChildren: () => import('./pages/registro/registro.module').then( m => m.RegistroPageModule)
+  },
+  
+  {
+    path: 'reset-password',
+    loadChildren: () => import('./pages/reset-password/reset-password.module').then( m => m.ResetPasswordPageModule)
   },
   {
-    path: 'paquetes-repartidor/:repartidorId',
-    loadChildren: () => import('./paquetes-repartidor/paquetes-repartidor.module').then( m => m.PaquetesRepartidorPageModule)
+    path: 'menu',
+    loadChildren: () => import('./pages/menu/menu.module').then( m => m.MenuPageModule)
   },
   {
-  path: 'detalle-paquete',
-  loadChildren: () => import('./detalle-paquete/detalle-paquete.module').then( m => m.DetallePaquetePageModule)
+    path: 'perfil',
+    loadChildren: () => import('./pages/perfil/perfil.module').then( m => m.PerfilPageModule)
   },
   {
-    path: 'ver-paquetes',
-    component: VerPaquetesPage,
+    path: 'registro-paquetes',
+    loadChildren: () => import('./registro-paquetes/registro-paquetes.module').then( m => m.RegistroPaquetesPageModule)
   },
-  {
-    path: 'detalle-paquete/:id',
-    component: DetallePaquetePage,
-  },
-  {
-    path: '',
-    redirectTo: 'ver-paquetes',
-    pathMatch: 'full',
-  },
-  {
-    path: 'detalle-repartidor/:id',
-    loadChildren: () => import('./detalle-repartidor/detalle-repartidor.module').then( m => m.DetalleRepartidorPageModule)
-  },
+
+
 ];
 
 @NgModule({
