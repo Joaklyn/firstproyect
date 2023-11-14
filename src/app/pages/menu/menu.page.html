@@ -1,13 +1,61 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>menu</ion-title>
-  </ion-toolbar>
+  <ion-toolbar class="custom-toolbar">
+      
+  <ion-title color="white" animate="true" class="animacion1" *ngFor="let i of usuario"> BIENVENIDO {{ i.nombre }}
+
+  </ion-title>
+      <ion-buttons slot="start">
+        <ion-button (click)="openPerfil()" class="custom-profile-button" (click)="Toast_3()">
+          <ion-icon class="custom-icon" name="person-circle-outline"></ion-icon>
+         
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">menu</ion-title>
-    </ion-toolbar>
-  </ion-header>
+
+<ion-content [fullscreen]="true" class="custom-menu-content">
+
+
+
+
+<ion-card class="card1">
+  
+  <ion-card-title>
+  
+      MENU REPARTIDOR
+   
+  </ion-card-title>
+
+<ion-card-content animate="true" class="animacion1" id="car2">
+  <ion-button (click)="Toast()" shape="round" expand="full" (click)="Paquetes()" class="custom-button custom-attendance-button">VER PAQUETES
+      <ion-icon slot="end" name="calendar-outline"></ion-icon>
+  </ion-button>
+</ion-card-content>
+
+<ion-card-content animate="true" class="animacion1" id="car2">
+  <ion-button (click)="Toast_2()"  shape="round" expand="full" (click)="abrirPaquete()" class="custom-button custom-qr-button">PAQUETES
+      <ion-icon slot="end" name="qr-code-outline"></ion-icon>
+  </ion-button>
+</ion-card-content>
+
+<ion-card-content animate="true" class="animacion1" id="car3">
+  <ion-button shape="round" expand="full" (click)="desLogin()" class="custom-button custom-logout-button">Cerrar Sesión
+      <ion-icon slot="end" name="exit-outline"></ion-icon>
+  </ion-button>
+</ion-card-content>
+
+
+</ion-card>
+
+
+<ion-card>
+  <ion-card-content>
+    <ion-button (click)="obtenerChisteProgramacion()">GENERE SU CHISTE</ion-button>
+    <p>{{ chiste }}</p>
+  </ion-card-content>
+</ion-card>
+
+
+
 </ion-content>

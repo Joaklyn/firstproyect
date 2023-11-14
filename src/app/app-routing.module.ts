@@ -35,7 +35,11 @@ const routes: Routes = [
   {
     path: 'registro-paquetes',
     loadChildren: () => import('./registro-paquetes/registro-paquetes.module').then( m => m.RegistroPaquetesPageModule)
+  },  {
+    path: 'paquetes',
+    loadChildren: () => import('./pages/paquetes/paquetes.module').then( m => m.PaquetesPageModule)
   },
+
 
 
 ];

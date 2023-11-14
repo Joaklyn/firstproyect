@@ -19,7 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
 
   imports: [BrowserModule,IonicModule.forRoot(),AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireAuthModule,
+    AngularFireAuthModule,HttpClientModule
     
   ],
   

@@ -1,13 +1,26 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>perfil</ion-title>
+    <ion-title>Perfil Repartidor</ion-title>
+
+
+    <ion-button slot="start" [routerLink]="'/menu'">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </ion-button>
+
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">perfil</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-card>
+    <img alt="zoro" src="https://static.retail.autofact.cl/blog/c_img_740x370.vjir88ldn2ou4a.jpg" />
+    <ion-card-header>
+      <ion-card-subtitle *ngFor="let i of usuario">Correo: {{ i.email }}</ion-card-subtitle>
+      <ion-card-subtitle *ngFor="let i of usuario">RUT: {{ i.rut }}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-button shape="round" (click)="hola()">P</ion-button>
+    <ion-button shape="round"(click)="adios()">S</ion-button>
+  </ion-card>
+
+  
+  
 </ion-content>
