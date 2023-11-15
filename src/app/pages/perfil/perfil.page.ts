@@ -4,7 +4,7 @@ import { AnimationController, IonCard} from '@ionic/angular';
 import type { Animation } from '@ionic/angular';
 import { StorageService } from 'src/app/services/storage.service';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
-
+import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
 
 @Component({
   selector: 'app-perfil',
@@ -12,6 +12,7 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
   styleUrls: ['./perfil.page.scss'],
 })
 export class PerfilPage implements OnInit {
+  imageUrl: string | undefined;
 
   usuario:any;
   correoUsuario:string = "";
@@ -74,4 +75,16 @@ export class PerfilPage implements OnInit {
     this.rutUsuario =  this.usuario[0].rut;
     
   }
+
+  async takePhoto() {
+    const image = await Camera.getPhoto({
+      resultType: CameraResultType.DataUrl,
+      source: CameraSource.Photos,
+      quality: 90,
+    });
+
+
+    this.imageUrl = image.dataUrl;
+  }
+
 }

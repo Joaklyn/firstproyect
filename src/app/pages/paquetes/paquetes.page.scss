@@ -1,0 +1,54 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  ion-header {
+    background-color: #3498db;
+    color: #ecf0f1;
+  }
+  
+  ion-toolbar {
+    text-align: center;
+  }
+  
+  ion-title {
+    font-size: 1.5em;
+  }
+  
+  ion-button {
+    color: #ecf0f1;
+  }
+  
+
+  ion-content {
+    padding: 20px;
+  }
+  
+
+  ion-card {
+    margin-bottom: 20px;
+  }
+  
+  ion-card-header {
+    background-color: #3498db;
+    color: #ecf0f1;
+  }
+  
+  ion-card-title {
+    font-size: 1.2em;
+  }
+  
+  ion-card-content {
+    padding: 10px;
+  }
+  
+  p {
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    color: #3498db;
+  }
+  

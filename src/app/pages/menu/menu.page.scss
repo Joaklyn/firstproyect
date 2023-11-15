@@ -1,0 +1,80 @@
+.custom-menu {
+    --background: #3498db;
+    --color: #fff;
+  }
+  
+  .custom-toolbar {
+    --background: #000000;
+    --color: #000000;
+  }
+  
+  .custom-icon {
+    font-size: 45px;
+    color: #ffffff;
+  }
+  
+  .custom-menu-content {
+    --background: #ffffff00;
+   
+    background-size: cover;
+    height: auto;
+  } 
+  
+  .custom-button {
+    --background: none;
+    font-size: 18px;
+    border: none;
+    border-radius: 0;
+    padding: 19px;
+    margin: 5px 0;
+  }
+  
+  .custom-attendance-button {
+    --background: #7588be;
+    --color: #fff;
+    
+  }
+  
+  .custom-button {
+    --background: #530ff1;
+    --color: #fff;
+  }
+  
+  .custom-logout-button {
+    --background: #e72c13;
+    --color: #fff;
+  }
+  
+  #car1{
+    margin-top: 20px;
+  
+  
+  }
+  #car2{
+    margin-top: 20px;
+    
+  }
+  #car3{
+    margin-top: 20px;
+    
+  }
+  .card1{
+  --background:  #ffffff;
+    margin-top: 70px;
+  }
+  
+  .animacion1 {
+    animation-name: slideIn; 
+    animation-duration: 4s; 
+    animation-timing-function: ease-in-out;
+    color: #ffffff;
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateX(-100%); 
+    }
+    100% {
+      transform: translateX(0); 
+    }
+  }

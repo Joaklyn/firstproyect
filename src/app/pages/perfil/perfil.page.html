@@ -12,15 +12,17 @@
 
 <ion-content [fullscreen]="true">
   <ion-card>
-    <img alt="zoro" src="https://static.retail.autofact.cl/blog/c_img_740x370.vjir88ldn2ou4a.jpg" />
     <ion-card-header>
-      <ion-card-subtitle *ngFor="let i of usuario">Correo: {{ i.email }}</ion-card-subtitle>
-      <ion-card-subtitle *ngFor="let i of usuario">RUT: {{ i.rut }}</ion-card-subtitle>
+      <ion-card-subtitle color="white" *ngFor="let i of usuario">Correo: {{ i.email }}</ion-card-subtitle>
+      <ion-card-subtitle color="white" *ngFor="let i of usuario">RUT: {{ i.rut }}</ion-card-subtitle>
     </ion-card-header>
     <ion-button shape="round" (click)="hola()">P</ion-button>
     <ion-button shape="round"(click)="adios()">S</ion-button>
+    <ion-button class="botonscan"  shape="round" expand="full" (click)="takePhoto()">Cambiar foto</ion-button>
   </ion-card>
 
-  
+
+
+   <ion-img [src]="imageUrl" *ngIf="imageUrl"></ion-img>
   
 </ion-content>
