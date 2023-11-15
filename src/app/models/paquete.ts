@@ -1,8 +1,8 @@
 export interface Paquete {
-    id: number;
+    id: string;
     nombre: string;
     descripcion: string;
     destinatario: string;
     estado: string;
-    repartidorId: number;
+    repartidorId: string;
   }
