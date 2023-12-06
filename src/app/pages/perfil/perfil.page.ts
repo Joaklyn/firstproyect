@@ -79,12 +79,12 @@ export class PerfilPage implements OnInit {
   async takePhoto() {
     const image = await Camera.getPhoto({
       resultType: CameraResultType.DataUrl,
-      source: CameraSource.Photos,
+      source: CameraSource.Camera,
       quality: 90,
     });
 
 
     this.imageUrl = image.dataUrl;
   }
-
+/* hola */
 }
